@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) throws InterruptedException, IOException {
-        //leggo file contenente matrice di adiacenza, utilizzo fileReader perchè in questo caso
+        //leggo file contenente matrice di incidenza, utilizzo fileReader perchè in questo caso
         // preferisco leggere uno stream di caratteri piuttosto che uno stream di bytes, in tal caso avrei utilizzato InputStream e InputStreamReader
         FileReader filereader = new FileReader("./matrix.txt");
         BufferedReader bf = new BufferedReader(filereader);
@@ -28,7 +28,7 @@ public class Main {
         for(String s : strings) {
             //tok è un array di String che divide ogni stringa in token, utilizzando come delimitatore lo spazio: " "
             String[] tok = s.split("\\s");
-            //converto ogni token in un numero intero da mettere nella matrice di adiacenza
+            //converto ogni token in un numero intero da mettere nella matrice di incidenza
             for(int w=0; w <tok.length;w++) {
                 matrix[h][w] = Integer.parseInt(tok[w]);
             }
