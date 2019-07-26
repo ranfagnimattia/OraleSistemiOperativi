@@ -8,7 +8,8 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) throws InterruptedException, IOException {
-        //lettura file
+        //leggo file contenente matrice di adiacenza, utilizzo fileReader perchè in questo caso
+        // preferisco leggere uno stream di caratteri piuttosto che uno stream di bytes, in tal caso avrei utilizzato InputStream e InputStreamReader
         FileReader filereader = new FileReader("./matrix.txt");
         BufferedReader bf = new BufferedReader(filereader);
         ArrayList<String> strings = new ArrayList<>();
